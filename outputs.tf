@@ -38,6 +38,7 @@ output "created_resources" {
       for i in aws_instance.example : {
         name      = i.tags["Name"]
         id        = i.id
+        public_ip = i.public_ip
       }
     ]
   }
